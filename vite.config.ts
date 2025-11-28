@@ -1,14 +1,17 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server: {
-    host: true,
+  base: './', // Importante para que funcione en cualquier hosting (Netlify/GitHub/Buckets)
+  define: {
+    'process.env': {}
   },
-  resolve: {
-    alias: {
-      '@': '/src',
-    },
-  },
-});
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    target: 'esnext'
+  }
+})

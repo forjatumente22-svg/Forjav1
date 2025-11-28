@@ -2,22 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-black text-white font-inter overflow-x-hidden antialiased;
+  }
 }
 
-body {
-  margin: 0;
-  background-color: #000000;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+@layer components {
+  .spark {
+    @apply absolute rounded-full pointer-events-none will-change-[transform,opacity];
+    background: #ffaa00;
+    box-shadow: 0 0 4px #ff4400;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
 }
 
-/* Custom glow utility */
-.glow-text {
-  text-shadow: 0 0 20px rgba(255, 68, 0, 0.5);
-}
-
-.glow-box {
-  box-shadow: 0 0 20px rgba(255, 68, 0, 0.3);
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .rotate-y-12 {
+    transform: rotateY(12deg);
+  }
 }
