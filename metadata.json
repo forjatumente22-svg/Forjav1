@@ -1,0 +1,5 @@
+{
+  "name": "Sistema Online DevOps",
+  "description": "Aplicación minimalista para verificación de despliegue en nube con configuración React + Vite + TypeScript.",
+  "requestFramePermissions": []
+}
