@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom glow utility */
+.glow-text {
+  text-shadow: 0 0 20px rgba(255, 68, 0, 0.5);
+}
+
+.glow-box {
+  box-shadow: 0 0 20px rgba(255, 68, 0, 0.3);
+}
